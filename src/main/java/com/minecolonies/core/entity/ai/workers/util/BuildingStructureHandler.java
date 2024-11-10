@@ -220,12 +220,14 @@ public class BuildingStructureHandler<J extends AbstractJobStructure<?, J>, B ex
             }
             
             BlockState blockStateForSound;
-            if (state.getBlock() == com.ldtteam.structurize.blocks.ModBlocks.blockSolidSubstitution.get()) {
+            if (state.getBlock() == com.ldtteam.structurize.blocks.ModBlocks.blockSolidSubstitution.get()) 
+            {
                 // If the builder is placing a substitution block, use the sound of the substituted block
                 // fancyPlacement() could be checked here, but is always true for this Handler.
                 blockStateForSound = structureAI.getSolidSubstitution(pos);
             }
-            else {
+            else 
+            {
                 // If the block is not a substitution block, use the sound of the block itself
                 blockStateForSound = state;
             }
